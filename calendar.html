@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+	<html lang="en">
+	
+		<head>
+		
+			<title> Calendar </title>
+			
+			<meta charset="utf-8">
+			<meta name="description" content="Yeti's Pick Snowcones Calendar page">
+			<meta name="keywords" content="snowcones, ice cream, cafe, mobile business, calendar">
+			<meta name="author" content="Paula Metz">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta http-equiv="refresh" content="10">
+			
+			<link rel="icon" type="image/png" href="images/favicon.png">
+			
+			<link href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+			
+			<style>
+			
+				*{
+					margin: 0px;
+					}
+			
+				header{
+					width: 100%;
+					height: 150px;
+					display: flex;
+					background-color: #E1DEFF;
+					}
+					
+				#logocontainer{
+					height: 150px;
+					width: 20%;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				nav{
+					height: 150px;
+					width: 60%;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				nav a{
+					text-decoration: none;
+					font-size: 30pt;
+					padding: 10px;
+					margin: auto;
+					font-family: Roboto, Arial;
+					font-weight: bold;
+					color: #000000;
+					}
+					
+				nav a:hover{
+					color: #7668DD;
+					}
+					
+				#buttoncontainer{
+					height: 150px;
+					width: 20%;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+				
+				#buttoncontainer a{
+					margin: auto;
+					}
+					
+				#signinbutton, #joinbutton{
+					font-size: 20pt;
+					font-family: Economica, Verdana;
+					padding: 10px 20px;
+					border-radius: 50px;
+					font-weight: bold;
+					box-shadow: 0px 3px 3px #00000050;
+					transition: transform .4s ease;
+					}
+					
+				#signinbutton{
+					border: solid 4px #988AFF;
+					background-color: #ffffff;
+					color: #988AFF;
+					}
+					
+				#joinbutton{
+					border: solid 4px #ffffff;
+					background-color: #988AFF90;
+					color: #ffffff;
+					}
+					
+				#signinbutton:hover, #joinbutton:hover{
+					cursor: pointer;
+					transform: scale(1.1);
+					}
+					
+				#signinbutton:active, #joinbutton:active{
+					transform: scale(0.9);
+					}
+					
+				main{
+					width: 100%;
+					}
+					
+				h1{
+					font-size: 36pt;
+					padding: 15px;
+					padding-left: 50px;
+					font-family: Roboto, Arial;
+					background-color: #E1DEFF99;
+					margin-top: 10px;
+					margin-bottom: 50px;
+					margin-right: 15px;
+					margin-left: 15px;
+					color: #4335AA;
+					letter-spacing: 3px;
+					text-shadow: 3px 3px white;
+					border: solid 4px #988AFF99;
+					border-right: solid 35px #988AFF99;
+					}
+					
+				#calendar{
+					margin: auto;
+					font-family: Roboto, Arial;
+					width: 95%;
+					border: solid 1px #4335AA;
+					border-radius: 5px;
+					}
+					
+				#calendar caption{
+					font-size: 36pt;
+					font-family: Economica, Verdana;
+					font-weight: bold;
+					padding: 5px;
+					margin: 15px;
+					margin-bottom: 40px;
+					background-color: #988AFF;
+					color: white;
+					border-radius: 30px;
+					}
+					
+				#calendar th{
+					position: relative;
+					width: 10%;
+					height: 40px;
+					font-size: 16pt;
+					text-decoration: underline;
+					color: #4335AA;
+					border: dashed 3px #4335AA;
+					background-color: #d8d4ff;
+					border-radius: 5px;
+					}
+					
+				#calendar td{
+					position: relative;
+					width: 10%;
+					height: 100px;
+					color: #9f9f9f;
+					border: solid 2px #4335AA;
+					font-size: 11pt;
+					border-radius: 5px;
+					}
+					
+				.num{
+					position: absolute;
+					bottom: 7.5px;
+					left: 7.5px;
+					font-size: 10pt;
+					color: #988AFF;
+					}
+				
+				.weekend{
+					background-color: #988AFF20;
+					}
+					
+				fieldset{
+					border: solid 3px #4335AA;
+					margin-right: 20%;
+					margin-left: 20%;
+					margin-top: 150px;
+					text-align: center;
+					padding: 25px;
+					border-radius: 20px;
+					background-color: #e6e3ff;
+					margin-bottom: 150px;
+					}
+					
+				legend{
+					text-align: left;
+					font-family: Economica, Verdana;
+					font-size: 36pt;
+					}
+					
+				#inputbox{
+					position: relative;
+					}
+					
+				#inputbox input{
+					height: 30px;
+					width: 40%;
+					font-size: 11pt;
+					border: solid 1px #4335AA;
+					border-radius: 5px;
+					margin-bottom: 10px;
+					}
+					
+				#inputbox textarea{
+					height: 30px;
+					width: 40%;
+					font-size: 11pt;
+					border: solid 1px #4335AA;
+					border-radius: 5px;
+					}
+					
+				#inputbox label{
+					font-size: 14pt;
+					font-family: Economica, Verdana;
+					}
+					
+				#submit, #reset{
+					font-size: 15pt;
+					font-family: Economica, Verdana;
+					padding: 7.5px 15px;
+					border-radius: 37.5px;
+					font-weight: bold;
+					box-shadow: 0px 2.25px 2.25px #00000050;
+					transition: transform .4s ease;
+					margin-top: 30px;
+					}
+					
+				#submit{
+					border: solid 3px #988AFF;
+					background-color: #ffffff;
+					color: #988AFF;
+					margin-right: 20px;
+					}
+					
+				#reset{
+					border: solid 3px #ffffff;
+					background-color: #988AFF90;
+					color: #ffffff;
+					margin-right: 20px;
+					}
+					
+				#submit:hover, #reset:hover{
+					cursor: pointer;
+					transform: scale(1.1);
+					}
+					
+				#submit:active, #reset:active{
+					transform: scale(0.9);
+					}
+					
+				footer{
+					height: 302px;
+					background-image: linear-gradient(135deg, #ffffff, #E1DEFF, #988AFF);
+					display: flex;
+					}
+					
+				#left{
+					height: 300px;
+					width: 50%;
+					}
+					
+				#iconcontainer{
+					height: 150px;
+					width: 100%;
+					display: flex;
+					}
+					
+				#iconcontainer a{
+					margin: auto;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					opacity: 90%;
+					transition-duration: .2s;
+					}
+					
+				#iconcontainer a:hover{
+					opacity: 70%;
+					}
+					
+				#iconcontainer a:active{
+					transform: translate(0, -2px);
+					}
+					
+				hr{
+					border: solid 1px #ffffff;
+					}
+					
+				#pagecontainer{
+					height: 150px;
+					width: 100%;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				.page{
+					margin: auto;
+					border-radius: 50px;
+					text-decoration: none;
+					font-size: 25pt;
+					padding: 10px 15px;
+					font-family: Economica, Verdana;
+					font-weight: bold;
+					border: solid 4px #333333;
+					color: #333333;
+					transition: transform .3s ease;
+					}
+					
+				.page:hover{
+					background-color: #33333305;
+					text-decoration: underline;
+					}
+					
+				.page:active{
+					background-color: #33333305;
+					transform: scale(0.95);
+					}
+					
+				#right{
+					height: 300px;
+					width: 50%;
+					display: flex;
+					}
+					
+				.legal{
+					width: 33.33%;
+					height: 300px;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				.legal a, .legal p{
+					font-family: Roboto, Arial;
+					color: #22222290;
+					font-size: 9pt;
+					}
+					
+				.legal a:hover{
+					text-decoration: none;
+					}
+					
+				.legal table{
+					height: 300px;
+					width: 100%;
+					padding: 20px;
+					}
+				
+				.legal table tr{
+					height: 30%;
+					}
+					
+			</style>
+			
+		</head>
+		
+		<body>
+		
+			<header>
+			
+				<div id="logocontainer">
+					
+					<a href="index.html" style="align-items: center; justify-content: center; display: flex; height: 150px; width: 100%;">
+						<img src="images/primary.png" height="80%">
+					</a>
+					
+				</div>
+				
+				<nav>
+				
+					<a href="menu.html"> Menu </a>
+					<a href="calendar.html" style="text-decoration: underline;"> Calendar </a>
+					<a href="contact.html"> Contact Us </a>
+				
+				</nav>
+				
+				<div id="buttoncontainer">
+				
+				
+					<a href="#"> <button id="signinbutton"> Sign In </button> </a>
+					
+					<a href="#"> <button id="joinbutton"> Join Us! </button> </a>
+					
+				</div>
+			
+			</header>
+			
+			<main>
+			
+				<h1> Where are we? </h1>
+				
+				<table border="1" id="calendar">
+				
+					<caption> March 2026 </caption>
+				
+					<tr>
+						
+						<th> Sunday </th>
+						<th> Monday </th>
+						<th> Tuesday </th>
+						<th> Wednesday </th>
+						<th> Thursday </th>
+						<th> Friday </th>
+						<th> Saturday </th>
+						
+					</tr>
+					
+					<tr>
+					
+						<td class="weekend"> <p class="num"> 1 </p> </td>
+						<td> <p style="position: absolute; top: 5px; left: 5px;"> Private Event <br> All Day </p> <p class="num"> 2 </p> </td>
+						<td> <p class="num"> 3 </p> </td>
+						<td> <p class="num"> 4 </p> </td>
+						<td> <p style="position: absolute; top: 5px; left: 5px;"> Weston Library Park <br> 12pm - 8pm </p> <p class="num"> 5 </p> </td>
+						<td> <p class="num"> 6 </p> </td>
+						<td class="weekend"> <p class="num"> 7 </p> </td>
+						
+					</tr>
+					
+					<tr>
+					
+						<td class="weekend"> <p class="num"> 8 </p> </td>
+						<td> <p class="num"> 9 </p> </td>
+						<td> <p class="num"> 10 </p> </td>
+						<td> <p class="num"> 11 </p> </td>
+						<td> <p style="position: absolute; top: 5px; left: 5px;"> Weston Library Park <br> 12pm - 8pm </p> <p class="num"> 12 </p> </td>
+						<td> <p class="num"> 13 </p> </td>
+						<td class="weekend"> <p style="position: absolute; top: 5px; left: 5px; color: #7a7979;"> Weston Music Festival <br> All Day </p> <p class="num"> 14 </p> </td>
+						
+					</tr>
+					
+					<tr>
+					
+						<td class="weekend"> <p style="position: absolute; top: 5px; left: 5px;color: #7a7979;"> Weston Music Festival <br> All Day </p> <p class="num"> 15 </p> </td>
+						<td> <p style="position: absolute; top: 5px; left: 5px;"> Weston Music Festival <br> All Day </p> <p class="num"> 16 </p> </td>
+						<td> <p style="position: absolute; top: 5px; left: 5px;"> Weston Music Festival <br> All Day </p> <p class="num"> 17 </p> </td>
+						<td> <p class="num"> 18 </p> </td>
+						<td> <p style="position: absolute; top: 5px; left: 5px;"> Weston Library Park <br> 12pm - 8pm </p> <p class="num"> 19 </p> </td>
+						<td> <p class="num"> 20 </p> </td>
+						<td class="weekend"> <p class="num"> 21 </p> </td>
+						
+					</tr>
+					
+					<tr>
+					
+						<td class="weekend"> <p class="num"> 22 </p> </td>
+						<td> <p class="num"> 23 </p> </td>
+						<td> <p class="num"> 24 </p> </td>
+						<td> <p class="num"> 25 </p> </td>
+						<td> <p style="position: absolute; top: 5px; left: 5px;"> Weston Library Park <br> 12pm - 8pm </p> <p class="num"> 26 </p> </td>
+						<td> <p class="num"> 27 </p> </td>
+						<td class="weekend"> <p class="num"> 28 </p> </td>
+						
+					</tr>
+					
+					<tr>
+					
+						<td class="weekend"> <p class="num"> 29 </p> </td>
+						<td> <p class="num"> 30 </p> </td>
+						<td> <p style="position: absolute; top: 5px; left: 5px;"> Private Event <br> 8pm - 12am </p> <p class="num"> 31 </p> </td>
+						<td id="nmonth"> <p class="num"> 1 </p> </td>
+						<td id="nmonth"> <p style="position: absolute; top: 5px; left: 5px;"> Weston Library Park <br> 12pm - 8pm </p> <p class="num"> 2 </p> </td>
+						<td id="nmonth"> <p class="num"> 3 </p> </td>
+						<td class="weekend" id="nmonth"> <p class="num"> 4 </p> </td>
+						
+					</tr>
+					
+				</table>
+				
+				<form>
+				
+					<fieldset id="field">
+					
+						<legend> Book Us for an Event </legend>
+						
+						<div id="inputbox">
+						
+							<label for="myName"> Name:<sup style="color: #988AFF;">*</sup> </label>
+						
+							<input type="text" required="required" name="myName" id="myName" placeholder="Enter your First & Last Name" style="font-family: Roboto, Arial;">
+							
+							<br><br>
+							
+							<label for="myEmail"> Email:<sup style="color: #988AFF;">*</sup> </label>
+
+							<input type="email" required="required" name="myEmail" id="myEmail" placeholder="Enter your E-mail" style="font-family: Roboto, Arial;">
+							
+							<br><br>
+							
+							<label for="myPhone"> Phone Number:<sup style="color: #988AFF;">*</sup> </label>
+
+							<input type="tel" required="required" name="myPhone" id="myPhone" placeholder="Enter your Phone Number" style="font-family: Roboto, Arial;">
+
+							<br><br>
+							
+							<label for="myDate"> Choose a Date:<sup style="color: #988AFF;">*</sup> </label>
+							
+							<input type="date" name="myDate" id="myDate"  required="required" style="font-family: Roboto, Arial;">
+							
+							<br><br>
+							
+							<label for="myAddress"> Address:<sup style="color: #988AFF;">*</sup> </label>
+							
+							<input type="text" required="required" name="myAdress" id="myAddress" placeholder="Enter your Address" style="font-family: Roboto, Arial;">
+							
+							<br><br>
+							
+							<label for="myPeople"> Estimated # of Guests: </label>
+							
+							<input type="text" name="myPeople" id="myPeople" placeholder="Enter your Estimate of Guests" style="font-family: Roboto, Arial;">
+							
+							<br><br>
+							
+							<label for="myComments" style="position: absolute; left: 95px; top: 370px;"> Additional Comments<br>/Questions: </label>
+
+							<textarea cols="20" rows="4" name="myComments" id="myComments" style="font-family: Roboto, Arial;">Place Your Comments Here</textarea>
+							
+							<br><br>
+							
+						</div>
+
+						<input id="submit" type="submit" value="Submit"> <input id="reset" type="reset" value="Reset">
+
+					</fieldset>
+						
+				</form>
+					
+			</main>
+			
+			<footer>
+			
+				<div id="left">
+			
+					<div id="iconcontainer">
+						
+						<a href="https://www.facebook.com" target="_blank">
+							<img src="images/newfacebook.png" width="70%">
+						</a>
+					
+						<a href="https://www.x.com" target="_blank">
+							<img src="images/newx.png" width="70%">
+						</a>
+						
+						<a href="https://www.youtube.com" target="_blank">
+							<img src="images/newyoutube.png" width="70%">
+						</a>
+						
+						<a href="https://www.instagram.com" target="_blank">
+							<img src="images/newinstagram.png" width="70%">
+						</a>
+						
+						<a href="https://www.tiktok.com" target="_blank">
+							<img src="images/newtiktok.png" width="70%">
+						</a>
+						
+						<a href="https://www.snapchat.com" target="_blank">
+							<img src="images/newsnapchat.png" width="70%">
+						</a>
+							
+					</div>
+					
+					<hr>
+					
+					<div id="pagecontainer">
+					
+						<a class="page" href="menu.html"> What do we have? </a>
+						<a class="page" href="calendar.html"> Location </a>
+						<a class="page" href="contact.html"> Contact Us Now! </a>
+					
+					</div>
+					
+				</div>
+				
+				<div id="right">
+					
+					<div class="legal">
+					
+						<table>
+						
+							<tr> <td> <a href="#"> Terms of Use </a> </td> </tr>
+							<tr> <td> <a href="#"> Privacy Policy </a> </td> </tr>
+							<tr> <td> <a href="#"> Cookie Settings </a> </td> </tr>
+							
+						</table>
+						
+					</div>
+					
+					<div class="legal">
+					
+						<table>
+						
+							<tr> <td> <a href="#"> Accessibility </a> </td> </tr>
+							<tr> <td> <a href="#"> Do Not Sell or Share My Personal Information </a> </td> </tr>
+							<tr> <td> <a href="#"> Consumer Health Data </a> </td> </tr>
+							
+						</table>
+					
+					</div>
+					
+					<div class="legal">
+					
+						<table>
+						
+							<tr> <td> <a href="#"> CA Supply Chain Act </a> </td> </tr>
+							<tr> <td> <a href="#"> Your Ad Choices </a> </td> </tr>
+							<tr> <td> <p> ©2025 Yeti's Pick Snowcones. All rights reserved. </p> </td> </tr>
+							
+						</table>
+					
+					</div>
+					
+				</div>
+			
+			</footer>
+		
+		</body>
+		
+	</html>

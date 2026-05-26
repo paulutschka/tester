@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+
+	<html lang="en">
+	
+		<head>
+		
+			<title> Home </title>
+			
+			<meta charset="utf-8">
+			<meta name="description" content="Yeti's Pick Snowcones Home page">
+			<meta name="keywords" content="snowcones, ice cream, cafe, mobile business, homepage">
+			<meta name="author" content="Paula Metz">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta http-equiv="refresh" content="300">
+			
+			<link rel="icon" type="image/png" href="images/favicon.png">
+			
+			<link href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+			
+			<style>
+			
+				*{
+					margin: 0px;
+					}
+			
+				header{
+					width: 100%;
+					height: 150px;
+					display: flex;
+					background-color: #E1DEFF;
+					}
+					
+				#logocontainer{
+					height: 150px;
+					width: 20%;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				nav{
+					height: 150px;
+					width: 60%;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				nav a{
+					text-decoration: none;
+					font-size: 30pt;
+					padding: 10px;
+					margin: auto;
+					font-family: Roboto, Arial;
+					font-weight: bold;
+					color: #000000;
+					}
+					
+				nav a:hover{
+					color: #7668DD;
+					}
+					
+				#buttoncontainer{
+					height: 150px;
+					width: 20%;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+				
+				#buttoncontainer a{
+					margin: auto;
+					}
+					
+				#signinbutton, #joinbutton{
+					font-size: 20pt;
+					font-family: Economica, Verdana;
+					padding: 10px 20px;
+					border-radius: 50px;
+					font-weight: bold;
+					box-shadow: 0px 3px 3px #00000050;
+					transition: transform .4s ease;
+					}
+					
+				#signinbutton{
+					border: solid 4px #988AFF;
+					background-color: #ffffff;
+					color: #988AFF;
+					}
+					
+				#joinbutton{
+					border: solid 4px #ffffff;
+					background-color: #988AFF90;
+					color: #ffffff;
+					}
+					
+				#signinbutton:hover, #joinbutton:hover{
+					cursor: pointer;
+					transform: scale(1.1);
+					}
+					
+				#signinbutton:active, #joinbutton:active{
+					transform: scale(0.9);
+					}
+					
+				main{
+					width: 100%;
+					}
+					
+				section{
+					margin-bottom: 50px;
+					width: 100%;
+					height: 500px;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				section div{
+					height: 500px;
+					width: 48%;
+					text-align: center;
+					}
+					
+				#order{
+					width: 100%;
+					height: 80px;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					background-color: #988AFF15;
+					}
+					
+				#order a{
+					height: 40px;
+					width: 150px;
+					}
+					
+				#order button{
+					border-radius: 20px;
+					width: 100%;
+					height: 100%;
+					cursor: pointer;
+					font-size: 15pt;
+					font-family: Roboto, Arial;
+					border: solid 3px #988AFF;
+					background-color: #ffffff;
+					}
+					
+				#order button:hover{
+					background-color: #eeeeee90;
+					}
+					
+				#order p{
+					font-size: 20pt;
+					font-family: Roboto, Arial;
+					font-weight: 425;
+					}
+
+				#betweenorder{
+					height: 80px;
+					width: 30px;
+					}
+					
+				#newflavor div{
+					background-image: linear-gradient(to right, #ed8f83, #ffffff, #ffffff, #95e1ed);
+					border-radius: 1px;
+					}
+					
+				#newflavor h1{
+					padding: 20px;
+					font-weight: bold;
+					font-size: 30pt;
+					font-family: Economica, Verdana;
+					color: #0E1661;
+					}
+					
+				#newflavor p{
+					font-size: 14pt;
+					padding: 50px;
+					font-family: Roboto, Arial;
+					color: #333333;
+					}
+					
+				#newflavor a{
+					height: 40px;
+					width: 150px;
+					}
+					
+				#newflavor button{
+					border-radius: 50px;
+					cursor: pointer;
+					font-size: 17pt;
+					font-family: Roboto, Arial;
+					border: solid 3px #f84633;
+					background-color: #ffffff;
+					margin-top: 50px;
+					padding: 14px;
+					}
+					
+				#newflavor button:hover{
+					background-color: #18a1ed20;
+					}
+					
+				#giftcard div{
+					background-color: #988AFF15;
+					}
+				
+				#giftcard h1{
+					padding: 20px;
+					font-weight: bold;
+					font-size: 30pt;
+					font-family: Economica, Verdana;
+					color: #3F2D76;
+					}
+					
+				#giftcard p{
+					font-size: 14pt;
+					padding: 50px;
+					font-family: Roboto, Arial;
+					color: #333333;
+					}
+					
+				#giftcard a{
+					height: 40px;
+					width: 150px;
+					}
+					
+				#giftcard button{
+					border-radius: 50px;
+					cursor: pointer;
+					font-size: 17pt;
+					font-family: Roboto, Arial;
+					border: solid 3px #988AFF ;
+					background-color: #ffffff;
+					margin-top: 100px;
+					padding: 14px;
+					}
+					
+				#giftcard button:hover{
+					background-color: #eeeeee;
+					}
+					
+				#icecream div{
+					background-color: #1472c315;
+					}
+				
+				#icecream h1{
+					padding: 20px;
+					font-weight: bold;
+					font-size: 30pt;
+					font-family: Economica, Verdana;
+					color: #312f3c;
+					}
+					
+				#icecream p{
+					font-size: 14pt;
+					padding: 50px;
+					font-family: Roboto, Arial;
+					color: #333333;
+					}
+					
+				#icecream a{
+					height: 40px;
+					width: 150px;
+					}
+					
+				#icecream button{
+					border-radius: 50px;
+					cursor: pointer;
+					font-size: 17pt;
+					font-family: Roboto, Arial;
+					border: solid 3px #1472c3 ;
+					background-color: #ffffff;
+					margin-top: 100px;
+					padding: 14px;
+					}
+					
+				#icecream button:hover{
+					background-color: #eeeeee;
+					}
+					
+				#rewards div{
+					background-color: #fcc41d20;
+					}
+				
+				#rewards h1{
+					padding: 20px;
+					font-weight: bold;
+					font-size: 30pt;
+					font-family: Economica, Verdana;
+					color: #e82d2d;
+					}
+					
+				#rewards p{
+					font-size: 14pt;
+					padding: 50px;
+					font-family: Roboto, Arial;
+					color: #333333;
+					}
+					
+				#rewards a{
+					height: 40px;
+					width: 150px;
+					}
+					
+				#rewards button{
+					border-radius: 50px;
+					cursor: pointer;
+					font-size: 17pt;
+					font-family: Roboto, Arial;
+					border: solid 3px #07bcdd ;
+					background-color: #ffffff;
+					margin-top: 100px;
+					padding: 14px;
+					}
+					
+				#rewards button:hover{
+					background-color: #ea3b3510;
+					}
+					
+				#book div{
+					background-color: #00000010;
+					}
+				
+				#book h1{
+					padding: 20px;
+					font-weight: bold;
+					font-size: 30pt;
+					font-family: Economica, Verdana;
+					color: #000000;
+					}
+					
+				#book p{
+					font-size: 14pt;
+					padding: 50px;
+					font-family: Roboto, Arial;
+					color: #333333;
+					}
+					
+				#book a{
+					height: 40px;
+					width: 150px;
+					}
+					
+				#book button{
+					border-radius: 50px;
+					cursor: pointer;
+					font-size: 17pt;
+					font-family: Roboto, Arial;
+					border: solid 3px #444444 ;
+					background-color: #ffffff;
+					margin-top: 100px;
+					padding: 14px;
+					}
+					
+				#book button:hover{
+					background-color: #00000010;
+					}
+					
+				footer{
+					height: 302px;
+					background-image: linear-gradient(135deg, #ffffff, #E1DEFF, #988AFF);
+					display: flex;
+					}
+					
+				#left{
+					height: 300px;
+					width: 50%;
+					}
+					
+				#iconcontainer{
+					height: 150px;
+					width: 100%;
+					display: flex;
+					}
+					
+				#iconcontainer a{
+					margin: auto;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					opacity: 90%;
+					transition-duration: .2s;
+					}
+					
+				#iconcontainer a:hover{
+					opacity: 70%;
+					}
+					
+				#iconcontainer a:active{
+					transform: translate(0, -2px);
+					}
+					
+				hr{
+					border: solid 1px #ffffff;
+					}
+					
+				#pagecontainer{
+					height: 150px;
+					width: 100%;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				.page{
+					margin: auto;
+					border-radius: 50px;
+					text-decoration: none;
+					font-size: 25pt;
+					padding: 10px 15px;
+					font-family: Economica, Verdana;
+					font-weight: bold;
+					border: solid 4px #333333;
+					color: #333333;
+					transition: transform .3s ease;
+					}
+					
+				.page:hover{
+					background-color: #33333305;
+					text-decoration: underline;
+					}
+					
+				.page:active{
+					background-color: #33333305;
+					transform: scale(0.95);
+					}
+					
+				#right{
+					height: 300px;
+					width: 50%;
+					display: flex;
+					}
+					
+				.legal{
+					width: 33.33%;
+					height: 300px;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				.legal a, .legal p{
+					font-family: Roboto, Arial;
+					color: #22222290;
+					font-size: 9pt;
+					}
+					
+				.legal a:hover{
+					text-decoration: none;
+					}
+					
+				.legal table{
+					height: 300px;
+					width: 100%;
+					padding: 20px;
+					}
+				
+				.legal table tr{
+					height: 30%;
+					}
+					
+			</style>
+			
+		</head>
+		
+		<body>
+		
+			<header>
+			
+				<div id="logocontainer">
+					
+					<a href="index.html" style="align-items: center; justify-content: center; display: flex; height: 150px; width: 100%;">
+						<img src="images/primary.png" height="80%">
+					</a>
+					
+				</div>
+				
+				<nav>
+				
+					<a href="menu.html"> Menu </a>
+					<a href="calendar.html"> Calendar </a>
+					<a href="contact.html"> Contact Us </a>
+				
+				</nav>
+				
+				<div id="buttoncontainer">
+				
+				
+					<a href="#"> <button id="signinbutton"> Sign In </button> </a>
+					
+					<a href="#"> <button id="joinbutton"> Join Us! </button> </a>
+					
+				</div>
+			
+			</header>
+			
+			<main>
+			
+				<section id="order">
+				
+					<p> Enjoy our Snowcones and Ice Cream! </p>
+
+					<div id="betweenorder"></div>
+					
+					<a href="menu.html">
+					
+						<button> Start Looking </button>
+						
+					</a>
+					
+				</section>
+				
+				<section id="newflavor">
+					
+					<div>
+					
+						<h1> Try the Newest Flavor! </h1>
+						
+						<p> We came up with this new combination because you are worth it. <br> Let us remind you of what you have done to help this country! <br> The combined Strawberry and Blue Raspberry flavor is truly a work of art that will softly melt on your tongue </p>
+						
+						<a href="menu.html#signature">
+						
+							<button> Check it Out </button>
+							
+						</a>
+						
+					</div>
+					
+					<div>
+					
+						<img src="images/snowconesus.jpg" alt="Introducing The New Freezedom Flavor!" width="100%" height="100%">
+						
+					</div>
+						
+				</section>
+				
+				<section id="giftcard">
+				
+					<div>
+					
+						<img src="images/giftcard.png" alt="We sell Giftcards" width="100%" height="100%">
+						
+					</div>
+					
+					<div>
+					
+						<h1> Need A Gift? </h1>
+						
+						<p> Our Giftcards bring joy to Young and Old! </p>
+						
+						<a href="menu.html#giftcard">
+						
+							<button> Buy One Today! </button>
+							
+						</a>
+						
+					</div>
+				
+				</section>
+				
+				<section id="icecream">
+				
+					<div>
+					
+						<h1> We have introduced Ice Cream </h1>
+						
+						<p> Our Popsicles and Blueberry Ice Cream are real fan favorites! <br> Let us make your day </p>
+						
+						<a href="menu.html#icecream">
+						
+							<button> View our Ice Cream </button>
+							
+						</a>
+						
+					</div>
+				
+					<div style="display: flex;">
+					
+						<img src="images/icecream.jpg" alt="One of our Ice creams" width="50%" height="100%">
+						<img src="images/popsicle.jpg" alt="One of our Popsicles" width="50%" height="100%">
+						
+					</div>
+				
+				</section>
+				
+				<section id="rewards">
+				
+					<div>
+					
+						<img src="images/rewards.jpg" alt="Get rewards and earn discounts on your snowcone order" width="100%" height="100%">
+						
+					</div>
+					
+					<div>
+					
+						<h1> Become a member and get the real Deals! </h1>
+						
+						<p> Join us today and get 10% off your first order! <br> Keep visiting to get more discounts and rewards</p>
+						
+						<a href="#">
+						
+							<button> Sign Up Today! </button>
+							
+						</a>
+						
+					</div>
+				
+				</section>
+				
+				<section id="book">
+				
+					<div>
+					
+						<h1> Book Us for your next Event! </h1>
+						
+						<p> Give us a Call and your Guests will thank you! <br> Our Snowcones are the Best you can find </p>
+						
+						<a href="calendar.html#field">
+						
+							<button> Contact Us </button>
+							
+						</a>
+						
+					</div>
+				
+					<div>
+					
+						<img src="images/book.jpg" alt="People eating snowcones" width="100%" height="100%">
+						
+					</div>
+				
+				</section>
+			
+			</main>
+			
+			<footer>
+			
+				<div id="left">
+			
+					<div id="iconcontainer">
+						
+						<a href="https://www.facebook.com" target="_blank">
+							<img src="images/newfacebook.png" width="70%">
+						</a>
+					
+						<a href="https://www.x.com" target="_blank">
+							<img src="images/newx.png" width="70%">
+						</a>
+						
+						<a href="https://www.youtube.com" target="_blank">
+							<img src="images/newyoutube.png" width="70%">
+						</a>
+						
+						<a href="https://www.instagram.com" target="_blank">
+							<img src="images/newinstagram.png" width="70%">
+						</a>
+						
+						<a href="https://www.tiktok.com" target="_blank">
+							<img src="images/newtiktok.png" width="70%">
+						</a>
+						
+						<a href="https://www.snapchat.com" target="_blank">
+							<img src="images/newsnapchat.png" width="70%">
+						</a>
+							
+					</div>
+					
+					<hr>
+					
+					<div id="pagecontainer">
+					
+						<a class="page" href="menu.html"> What do we have? </a>
+						<a class="page" href="calendar.html"> Location </a>
+						<a class="page" href="contact.html"> Contact Us Now! </a>
+					
+					</div>
+					
+				</div>
+				
+				<div id="right">
+					
+					<div class="legal">
+					
+						<table>
+						
+							<tr> <td> <a href="#"> Terms of Use </a> </td> </tr>
+							<tr> <td> <a href="#"> Privacy Policy </a> </td> </tr>
+							<tr> <td> <a href="#"> Cookie Settings </a> </td> </tr>
+							
+						</table>
+						
+					</div>
+					
+					<div class="legal">
+					
+						<table>
+						
+							<tr> <td> <a href="#"> Accessibility </a> </td> </tr>
+							<tr> <td> <a href="#"> Do Not Sell or Share My Personal Information </a> </td> </tr>
+							<tr> <td> <a href="#"> Consumer Health Data </a> </td> </tr>
+							
+						</table>
+					
+					</div>
+					
+					<div class="legal">
+					
+						<table>
+						
+							<tr> <td> <a href="#"> CA Supply Chain Act </a> </td> </tr>
+							<tr> <td> <a href="#"> Your Ad Choices </a> </td> </tr>
+							<tr> <td> <p> ©2025 Yeti's Pick Snowcones. All rights reserved. </p> </td> </tr>
+							
+						</table>
+					
+					</div>
+					
+				</div>
+			
+			</footer>
+		
+		</body>
+		
+	</html>

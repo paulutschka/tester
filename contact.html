@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+
+	<html lang="en">
+	
+		<head>
+		
+			<title> Contact </title>
+			
+			<meta charset="utf-8">
+			<meta name="description" content="Yeti's Pick Snowcones Contact page">
+			<meta name="keywords" content="snowcones, ice cream, cafe, mobile business, contact">
+			<meta name="author" content="Paula Metz">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta http-equiv="refresh" content="10">
+			
+			<link rel="icon" type="image/png" href="images/favicon.png">
+			
+			<link href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+			
+			<style>
+			
+				*{
+					margin: 0px;
+					}
+			
+				header{
+					width: 100%;
+					height: 150px;
+					display: flex;
+					background-color: #E1DEFF;
+					}
+					
+				#logocontainer{
+					height: 150px;
+					width: 20%;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				nav{
+					height: 150px;
+					width: 60%;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				nav a{
+					text-decoration: none;
+					font-size: 30pt;
+					padding: 10px;
+					margin: auto;
+					font-family: Roboto, Arial;
+					font-weight: bold;
+					color: #000000;
+					}
+					
+				nav a:hover{
+					color: #7668DD;
+					}
+					
+				#buttoncontainer{
+					height: 150px;
+					width: 20%;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+				
+				#buttoncontainer a{
+					margin: auto;
+					}
+					
+				#signinbutton, #joinbutton{
+					font-size: 20pt;
+					font-family: Economica, Verdana;
+					padding: 10px 20px;
+					border-radius: 50px;
+					font-weight: bold;
+					box-shadow: 0px 3px 3px #00000050;
+					transition: transform .4s ease;
+					}
+					
+				#signinbutton{
+					border: solid 4px #988AFF;
+					background-color: #ffffff;
+					color: #988AFF;
+					}
+					
+				#joinbutton{
+					border: solid 4px #ffffff;
+					background-color: #988AFF90;
+					color: #ffffff;
+					}
+					
+				#signinbutton:hover, #joinbutton:hover{
+					cursor: pointer;
+					transform: scale(1.1);
+					}
+					
+				#signinbutton:active, #joinbutton:active{
+					transform: scale(0.9);
+					}
+					
+				main{
+					width: 100%;
+					}
+					
+				#secheader{
+					font-size: 23pt;
+					font-family: Economica, Verdana;
+					font-weight: bold;
+					padding: 20px;
+					text-align: center;
+					background-color: #e6e3ff80;
+					}
+					
+				#secheader a{
+					color: #4335AA;
+					text-decoration: none;
+					}
+					
+				#secheader a:hover{
+					text-decoration: underline;
+					}
+					
+				#owner p{
+					color: #ffffff;
+					padding: 10px;
+					font-family: Roboto, Arial;
+					}
+					
+				#ownercon{
+					display: flex;
+					width: 100%;
+					background-color: #988AFF;
+					margin-top: 20px;
+					}
+
+				fieldset{
+					border: solid 3px #4335AA;
+					margin-right: 20%;
+					margin-left: 20%;
+					text-align: center;
+					padding: 25px;
+					border-radius: 20px;
+					background-color: #e6e3ff;
+					margin-bottom: 75px;
+					margin-top: 75px;
+					}
+					
+				legend{
+					text-align: left;
+					font-family: Economica, Verdana;
+					font-size: 36pt;
+					}
+					
+				#inputbox{
+					position: relative;
+					}
+					
+				#inputbox input{
+					height: 30px;
+					width: 40%;
+					font-size: 11pt;
+					border: solid 1px #4335AA;
+					border-radius: 5px;
+					margin-bottom: 10px;
+					}
+					
+				#inputbox textarea{
+					height: 30px;
+					width: 40%;
+					font-size: 11pt;
+					border: solid 1px #4335AA;
+					border-radius: 5px;
+					}
+					
+				#inputbox label{
+					font-size: 14pt;
+					font-family: Economica, Verdana;
+					}
+					
+				#submit, #reset{
+					font-size: 15pt;
+					font-family: Economica, Verdana;
+					padding: 7.5px 15px;
+					border-radius: 37.5px;
+					font-weight: bold;
+					box-shadow: 0px 2.25px 2.25px #00000050;
+					transition: transform .4s ease;
+					margin-top: 30px;
+					}
+					
+				#submit{
+					border: solid 3px #988AFF;
+					background-color: #ffffff;
+					color: #988AFF;
+					margin-right: 20px;
+					}
+					
+				#reset{
+					border: solid 3px #ffffff;
+					background-color: #988AFF90;
+					color: #ffffff;
+					margin-right: 20px;
+					}
+					
+				#submit:hover, #reset:hover{
+					cursor: pointer;
+					transform: scale(1.1);
+					}
+					
+				#submit:active, #reset:active{
+					transform: scale(0.9);
+					}
+					
+				#second fieldset{
+					border: solid 4px #e6e3ff;
+					margin-right: 20%;
+					margin-left: 20%;
+					text-align: center;
+					padding: 25px;
+					border-radius: 20px;
+					background-color: #988AFF99;
+					margin-bottom: 150px;
+					margin-top: 50px;
+					}
+					
+				#second legend{
+					text-align: left;
+					font-family: Economica, Verdana;
+					font-size: 36pt;
+					}
+					
+				#second #inputbox{
+					position: relative;
+					}
+					
+				#second #inputbox input{
+					height: 30px;
+					width: 40%;
+					font-size: 11pt;
+					border: solid 3px #e6e3ff;
+					border-radius: 5px;
+					margin-bottom: 10px;
+					}
+					
+				#second #inputbox textarea{
+					height: 30px;
+					width: 40%;
+					font-size: 11pt;
+					border: solid 3px #e6e3ff;
+					border-radius: 5px;
+					}
+					
+				#second #inputbox label{
+					font-size: 14pt;
+					font-family: Economica, Verdana;
+					}
+					
+				#second #submit, #second #reset{
+					font-size: 15pt;
+					font-family: Economica, Verdana;
+					padding: 7.5px 15px;
+					border-radius: 37.5px;
+					font-weight: bold;
+					box-shadow: 0px 2.25px 2.25px #00000050;
+					transition: transform .4s ease;
+					margin-top: 30px;
+					}
+					
+				#second #submit{
+					border: solid 3px #988AFF;
+					background-color: #ffffff;
+					color: #988AFF;
+					margin-right: 20px;
+					}
+					
+				#second #reset{
+					border: solid 3px #ffffff;
+					background-color: #988AFF90;
+					color: #ffffff;
+					margin-right: 20px;
+					}
+					
+				#second #submit:hover, #second #reset:hover{
+					cursor: pointer;
+					transform: scale(1.1);
+					}
+					
+				#second #submit:active, #second #reset:active{
+					transform: scale(0.9);
+					}
+					
+				footer{
+					height: 302px;
+					background-image: linear-gradient(135deg, #ffffff, #E1DEFF, #988AFF);
+					display: flex;
+					}
+					
+				#left{
+					height: 300px;
+					width: 50%;
+					}
+					
+				#iconcontainer{
+					height: 150px;
+					width: 100%;
+					display: flex;
+					}
+					
+				#iconcontainer a{
+					margin: auto;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					opacity: 90%;
+					transition-duration: .2s;
+					}
+					
+				#iconcontainer a:hover{
+					opacity: 70%;
+					}
+					
+				#iconcontainer a:active{
+					transform: translate(0, -2px);
+					}
+					
+				hr{
+					border: solid 1px #ffffff;
+					}
+					
+				#pagecontainer{
+					height: 150px;
+					width: 100%;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				.page{
+					margin: auto;
+					border-radius: 50px;
+					text-decoration: none;
+					font-size: 25pt;
+					padding: 10px 15px;
+					font-family: Economica, Verdana;
+					font-weight: bold;
+					border: solid 4px #333333;
+					color: #333333;
+					transition: transform .3s ease;
+					}
+					
+				.page:hover{
+					background-color: #33333305;
+					text-decoration: underline;
+					}
+					
+				.page:active{
+					background-color: #33333305;
+					transform: scale(0.95);
+					}
+					
+				#right{
+					height: 300px;
+					width: 50%;
+					display: flex;
+					}
+					
+				.legal{
+					width: 33.33%;
+					height: 300px;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				.legal a, .legal p{
+					font-family: Roboto, Arial;
+					color: #22222290;
+					font-size: 9pt;
+					}
+					
+				.legal a:hover{
+					text-decoration: none;
+					}
+					
+				.legal table{
+					height: 300px;
+					width: 100%;
+					padding: 20px;
+					}
+				
+				.legal table tr{
+					height: 30%;
+					}
+					
+			</style>
+			
+		</head>
+		
+		<body>
+		
+			<header>
+			
+				<div id="logocontainer">
+					
+					<a href="index.html" style="align-items: center; justify-content: center; display: flex; height: 150px; width: 100%;">
+						<img src="images/primary.png" height="80%">
+					</a>
+					
+				</div>
+				
+				<nav>
+				
+					<a href="menu.html"> Menu </a>
+					<a href="calendar.html"> Calendar </a>
+					<a href="contact.html" style="text-decoration: underline;"> Contact Us </a>
+				
+				</nav>
+				
+				<div id="buttoncontainer">
+				
+				
+					<a href="#"> <button id="signinbutton"> Sign In </button> </a>
+					
+					<a href="#"> <button id="joinbutton"> Join Us! </button> </a>
+					
+				</div>
+			
+			</header>
+			
+			<main>
+			
+				<div id="secheader">
+				
+					<p> Want to Book us for an Event? <a href="calendar.html#field"> Click Here! </a></p>
+				
+				</div>
+			
+				<div id="owner">
+					
+					<div id="ownercon">
+					
+						<p style="padding-left: 30%; margin: auto;"> Email: yetispick@gmail.com </p>
+					
+						<p style="padding-right: 30%; margin: auto;"> Phone: <span style="font-weight: bold;"> +1 (305) 123-4567 </span> </p>
+							
+					</div>
+					
+				</div>
+				
+				<form>
+				
+					<fieldset>
+					
+						<legend> Leave a Review </legend>
+
+						<div id="inputbox" style="font-family: Roboto, Arial;">
+						
+							<label for="myProorcon" style="position: absolute; left: 200px; top: 10px;"> Choose Type: <sup style="color: #988AFF;">*</sup> </label>
+						
+							<input type="radio" name="Proorcon" value="Positie Review" style="width: 5%; height: 15px;">Positive Review
+						
+							<br>
+						
+							<input type="radio" name="Proorcon" value="Complaint" style="width: 5%; height: 15px;">Complaint
+
+							<br><br>
+							
+							<label for="myReviewname"> Name:<sup style="color: #988AFF;">*</sup> </label>
+							
+							<input type="text" name="myReviewname" id="myReviewname" required="required" placeholder="Enter your First & Last Name">
+							
+							<br><br>
+							
+							<label for="myReviewemail"> Email:<sup style="color: #988AFF;">*</sup> </label>
+							
+							<input type="email" name="myReviewemail" id="myReviewemail" required="required" placeholder="Enter your E-mail">
+							
+							<br><br>
+							
+							<label for="myReviewnumber"> Phone Number:<sup style="color: #988AFF;">*</sup> </label>
+							
+							<input type="tel" name="myReviewnumber" id="myReviewnumber" required="required" placeholder="Enter your Phone Number">
+							
+							<br><br>
+							
+							<label for="myRating" style="padding-right: 10px;"> How would you rate us?<sup style="color: #988AFF;">*</sup> </label>
+							
+							1*<input type="range" min="1" max="5" name="myRating" id="myRating" style="width: 30%;" required="required">5*
+							
+							<br><br><br>
+						
+							<label for="myDetails" style="position: absolute; top: 335px; left: 65px;"> What did you like?<br> / What can we do better? <sup style="color: #988AFF;">*</sup> </label>
+						
+							<textarea name="myDetails" id="myDetails" cols="20" rows="4" style="font-family: Roboto, Arial;" required="required">Place your Comments Here</textarea>
+
+							<br><br>
+
+						</div>
+
+						<input id="reset" type="submit" value="Submit"> <input id="submit" type="reset" value="Reset">
+						
+					</fieldset>
+					
+				</form>
+				
+				<hr style="width: 80%; margin: auto; border: solid 1px #988AFF40;">
+				
+				<section id="second">
+					<form>
+					
+						<fieldset>
+						
+							<legend> Register to Join Our Network / Team </legend>
+
+							<div id="inputbox" style="font-family: Roboto, Arial;">
+								
+								<label for="myRegistername"> Name:<sup style="color: #988AFF;">*</sup> </label>
+								
+								<input type="text" name="myRegistername" id="myRegistername" required="required" placeholder="Enter your First & Last Name">
+								
+								<br><br>
+								
+								<label for="myRegisteremail"> Email:<sup style="color: #988AFF;">*</sup> </label>
+								
+								<input type="email" name="myRegisteremail" id="myRegisteremail" required="required" placeholder="Enter your E-mail">
+								
+								<br><br>
+								
+								<label for="myRegisternumber"> Phone Number:<sup style="color: #988AFF;">*</sup> </label>
+								
+								<input type="tel" name="myRegisternumber" id="myRegisternumber" required="required" placeholder="Enter your Phone Number">
+								
+								<br><br><br>
+							
+								<label for="myRegister" style="position: absolute; top: 215px; left: 50px;"> Please give us some info <br> about you and your plan to <br> open a "Yeti's Pick" yourself <sup style="color: #988AFF;">*</sup> </label>
+							
+								<textarea name="myReqister" id="myReqister" cols="20" rows="4" style="font-family: Roboto, Arial; height: 150px;">Place your Comments Here</textarea>
+
+								<br><br><br>
+
+							</div>
+
+							<input id="submit" type="submit" value="Submit"> <input id="reset" type="reset" value="Reset">
+							
+						</fieldset>
+						
+					</form>
+					
+				</div>
+			
+			</main>
+			
+			<footer>
+			
+				<div id="left">
+			
+					<div id="iconcontainer">
+						
+						<a href="https://www.facebook.com" target="_blank">
+							<img src="images/newfacebook.png" width="70%">
+						</a>
+					
+						<a href="https://www.x.com" target="_blank">
+							<img src="images/newx.png" width="70%">
+						</a>
+						
+						<a href="https://www.youtube.com" target="_blank">
+							<img src="images/newyoutube.png" width="70%">
+						</a>
+						
+						<a href="https://www.instagram.com" target="_blank">
+							<img src="images/newinstagram.png" width="70%">
+						</a>
+						
+						<a href="https://www.tiktok.com" target="_blank">
+							<img src="images/newtiktok.png" width="70%">
+						</a>
+						
+						<a href="https://www.snapchat.com" target="_blank">
+							<img src="images/newsnapchat.png" width="70%">
+						</a>
+							
+					</div>
+					
+					<hr>
+					
+					<div id="pagecontainer">
+					
+						<a class="page" href="menu.html"> What do we have? </a>
+						<a class="page" href="calendar.html"> Location </a>
+						<a class="page" href="contact.html"> Contact Us Now! </a>
+					
+					</div>
+					
+				</div>
+				
+				<div id="right">
+					
+					<div class="legal">
+					
+						<table>
+						
+							<tr> <td> <a href="#"> Terms of Use </a> </td> </tr>
+							<tr> <td> <a href="#"> Privacy Policy </a> </td> </tr>
+							<tr> <td> <a href="#"> Cookie Settings </a> </td> </tr>
+							
+						</table>
+						
+					</div>
+					
+					<div class="legal">
+					
+						<table>
+						
+							<tr> <td> <a href="#"> Accessibility </a> </td> </tr>
+							<tr> <td> <a href="#"> Do Not Sell or Share My Personal Information </a> </td> </tr>
+							<tr> <td> <a href="#"> Consumer Health Data </a> </td> </tr>
+							
+						</table>
+					
+					</div>
+					
+					<div class="legal">
+					
+						<table>
+						
+							<tr> <td> <a href="#"> CA Supply Chain Act </a> </td> </tr>
+							<tr> <td> <a href="#"> Your Ad Choices </a> </td> </tr>
+							<tr> <td> <p> ©2025 Yeti's Pick Snowcones. All rights reserved. </p> </td> </tr>
+							
+						</table>
+					
+					</div>
+					
+				</div>
+			
+			</footer>
+		
+		</body>
+		
+	</html>

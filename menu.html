@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+
+	<html lang="en">
+	
+		<head>
+		
+			<title> Menu </title>
+			
+			<meta charset="utf-8">
+			<meta name="description" content="Yeti's Pick Snowcones Menu page">
+			<meta name="keywords" content="snowcones, ice cream, cafe, mobile business, menu">
+			<meta name="author" content="Paula Metz">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta http-equiv="refresh" content="10">
+			
+			<link rel="icon" type="image/png" href="images/favicon.png">
+			
+			<link href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+			
+			<style>
+			
+				*{
+					margin: 0px;
+					}
+			
+				header{
+					width: 100%;
+					height: 150px;
+					display: flex;
+					background-color: #E1DEFF;
+					}
+					
+				#logocontainer{
+					height: 150px;
+					width: 20%;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				nav{
+					height: 150px;
+					width: 60%;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				nav a{
+					text-decoration: none;
+					font-size: 30pt;
+					padding: 10px;
+					margin: auto;
+					font-family: Roboto, Arial;
+					font-weight: bold;
+					color: #000000;
+					}
+					
+				nav a:hover{
+					color: #7668DD;
+					}
+					
+				#buttoncontainer{
+					height: 150px;
+					width: 20%;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+				
+				#buttoncontainer a{
+					margin: auto;
+					}
+					
+				#signinbutton, #joinbutton{
+					font-size: 20pt;
+					font-family: Economica, Verdana;
+					padding: 10px 20px;
+					border-radius: 50px;
+					font-weight: bold;
+					box-shadow: 0px 3px 3px #00000050;
+					transition: transform .4s ease;
+					}
+					
+				#signinbutton{
+					border: solid 4px #988AFF;
+					background-color: #ffffff;
+					color: #988AFF;
+					}
+					
+				#joinbutton{
+					border: solid 4px #ffffff;
+					background-color: #988AFF90;
+					color: #ffffff;
+					}
+					
+				#signinbutton:hover, #joinbutton:hover{
+					cursor: pointer;
+					transform: scale(1.1);
+					}
+					
+				#signinbutton:active, #joinbutton:active{
+					transform: scale(0.9);
+					}
+					
+				main{
+					width: 100%;
+					}
+
+				#topbody{
+					width: 100%;
+					height: 60px;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					background-image: linear-gradient(to top, #eeeeff, #E1DEFF90);
+					}
+					
+				#topbody a{
+					font-size: 18pt;
+					padding: 5px 15px;
+					margin: auto;
+					text-decoration: none;
+					font-family: Economica, Verdana;
+					font-weight: bold;
+					color: #4335AA;
+					border-radius: 25px;
+					}
+					
+				#topbody a:hover{
+					background-color: #00000009;
+					}
+
+				#bottombody{
+					width: 100%;
+					}
+					
+				#mainheader{
+					height: 400px;
+					width: 100%;
+					display: flex;
+					background-color: #e6e3ff;
+					margin-bottom: 100px;
+					margin-top: 25px;
+					}
+					
+				#mainheader div{
+					width: 50%;
+					text-align: center;
+					font-family: Roboto, Arial;
+					color: #988AFF;
+					text-shadow: 3px 3px #ffffff;
+					}
+					
+				#mainheader h1{
+					font-size: 28pt;
+					padding: 5px;
+					padding-top: 55px;
+					}
+					
+				#mainheader p{
+					font-size: 16pt;
+					padding: 5px;
+					margin: 30px;
+					}
+					
+				#bottombody section{
+					width: 90%;
+					margin-left: 5%;
+					margin-right: 5%;
+					margin-bottom: 50px;
+					font-family: Roboto, Arial;
+					}
+					
+				.menutitle{
+					width: 100%;
+					height: 60px;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					color: #F2EFFF;
+					background-color: #988AFF;
+					}
+					
+				.menudescription{
+					padding: 20px;
+					font-size: 16pt;
+					font-family: Economica, Verdana;
+					font-weight: bold;
+					color: #100277;
+					background-color: #E1DEFF99;
+					}
+					
+				#signature{
+					margin-top: 150px;
+					}
+					
+				#icecream{
+					margin-top: 225px;
+					}
+									
+				#giftcard{
+					margin-top: 175px;
+					}
+					
+				#classic h1{
+					margin-right: 55px;
+					}
+					
+				#classic hr{
+					width: 68%;
+					border: solid 1px white;
+					}
+					
+				#signature h1{
+					margin-right: 55px;
+					}
+					
+				#signature hr{
+					width: 67%;
+					border: solid 1px white;
+					}
+						
+				#icecream h1{
+					margin-right: 55px;
+					}
+					
+				#icecream hr{
+					width: 60%;
+					border: solid 1px white;
+					}
+					
+				#giftcard h1{
+					margin-right: 55px;
+					}
+					
+				#giftcard figure{
+					width: 30%;
+					}
+					
+				#giftcard hr{
+					width: 76%;
+					border: solid 1px white;
+					}
+					
+				.row{
+					width: 90%;
+					height: 350px;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					margin-left: 5%;
+					}
+					
+				.row figure{
+					width: 15%;
+					height: 65%;
+					margin: auto;
+					}
+					
+				.row figcaption{
+					background-color: #988AFF;
+					color: white;
+					text-align: center;
+					font-size: 10pt;
+					padding: 10px;
+					}
+
+				footer{
+					height: 302px;
+					background-image: linear-gradient(135deg, #ffffff, #E1DEFF, #988AFF);
+					display: flex;
+					}
+					
+				#left{
+					height: 300px;
+					width: 50%;
+					}
+					
+				#iconcontainer{
+					height: 150px;
+					width: 100%;
+					display: flex;
+					}
+					
+				#iconcontainer a{
+					margin: auto;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					opacity: 90%;
+					transition-duration: .2s;
+					}
+					
+				#iconcontainer a:hover{
+					opacity: 70%;
+					}
+					
+				#iconcontainer a:active{
+					transform: translate(0, -2px);
+					}
+					
+				footer hr{
+					border: solid 1px #ffffff;
+					}
+					
+				#pagecontainer{
+					height: 150px;
+					width: 100%;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				.page{
+					margin: auto;
+					border-radius: 50px;
+					text-decoration: none;
+					font-size: 25pt;
+					padding: 10px 15px;
+					font-family: Economica, Verdana;
+					font-weight: bold;
+					border: solid 4px #333333;
+					color: #333333;
+					transition: transform .3s ease;
+					}
+					
+				.page:hover{
+					background-color: #33333305;
+					text-decoration: underline;
+					}
+					
+				.page:active{
+					background-color: #33333305;
+					transform: scale(0.95);
+					}
+					
+				#right{
+					height: 300px;
+					width: 50%;
+					display: flex;
+					}
+					
+				.legal{
+					width: 33.33%;
+					height: 300px;
+					align-items: center;
+					justify-content: center;
+					display: flex;
+					}
+					
+				.legal a, .legal p{
+					font-family: Roboto, Arial;
+					color: #22222290;
+					font-size: 9pt;
+					}
+					
+				.legal a:hover{
+					text-decoration: none;
+					}
+					
+				.legal table{
+					height: 300px;
+					width: 100%;
+					padding: 20px;
+					}
+				
+				.legal table tr{
+					height: 30%;
+					}
+					
+			</style>
+			
+		</head>
+		
+		<body>
+		
+			<header>
+			
+				<div id="logocontainer">
+					
+					<a href="index.html" style="align-items: center; justify-content: center; display: flex; height: 150px; width: 100%;">
+						<img src="images/primary.png" height="80%">
+					</a>
+					
+				</div>
+				
+				<nav>
+				
+					<a href="menu.html" style="text-decoration: underline;"> Menu </a>
+					<a href="calendar.html"> Calendar </a>
+					<a href="contact.html"> Contact Us </a>
+				
+				</nav>
+				
+				<div id="buttoncontainer">
+				
+				
+					<a href="#"> <button id="signinbutton"> Sign In </button> </a>
+					
+					<a href="#"> <button id="joinbutton"> Join Us! </button> </a>
+					
+				</div>
+			
+			</header>
+			
+			<main>
+			
+				<div id="topbody">
+				
+					
+					<a href="#classic"> Classic Flavors </a>
+					
+					<a href="#signature"> Signature Cones </a>
+					
+					<a href="#icecream"> Ice Cream & Popsicles </a>
+					
+					<a href="#giftcard"> Giftcards </a>
+					
+					
+				</div>
+				
+				<div id="bottombody">
+				
+					<div id="mainheader">
+					
+						<div>
+						
+							<h1> We have Everything you Dream of! </h1>
+							
+							<p> No matter if you like berry flavor, tropical flavors, or cotton candy and bubblegum, by visiting us you make the right choice </p>
+							
+							<p> Go with the Classics or try one of our Signature Cones Today, you'll be surprised! </p>
+							
+							<p style="font-size: 10pt; color: #988AFF; text-shadow: 0 0;"> *Ask our server to make your own combination </p>
+							
+						</div>
+						
+						<img src="images/menusnowcone.png" alt="One of our fan favorite cones" width="50%">
+						
+					</div>
+					
+					<section id="classic">
+						
+						<div class="menutitle">
+							
+							<h1> Classic Flavors </h1>
+							
+							<hr>
+								
+						</div>
+						
+						<div class="menudescription">
+						
+							<p> Can't do wrong by picking one of our Basics! <br> Small $3<sup>.99</sup> Medium $5<sup>.99</sup> Large $7<sup>.99</sup> </p>
+						
+						</div>
+						
+						<div>
+						
+							<div class="row">
+							
+								<figure>
+								
+									<img src="images/blueraspberry.png" alt="Our blue raspberry flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Blue Razzberry- </span> <br> sour, but surely for everyone </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/strawberry.png" alt="Our strawberry flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Sweet Strawberry- </span> <br> for all the sweet tooths </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/watermelon.png" alt="Our watermelon flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Fruity Watermelon- </span> <br> rich in flavor, perfect for all occasions </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/grape.png" alt="Our grape flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Acidic Grape- </span> <br> for those who like the thrill </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/greenapple.png" alt="Our green apple flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Sharp Green Apple- </span> <br> the sour allrounder </figcaption>
+									
+								</figure>
+							
+							</div>
+							
+							<div class="row">
+								
+								<figure>
+								
+									<img src="images/peach.png" alt="Our peach flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Fresh Peach- </span> <br> fruity and delicious </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/pineapple.png" alt="Our pineapple flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Tropical Pineapple- </span> <br> tastes just like a real one </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/cherry.png" alt="Our cherry flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Ripe Cherry- </span> <br> the classy choice </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/orange.png" alt="Our orange flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Energetic Orange- </span> <br> for those who like it simple </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/mango.png" alt="Our mango flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Exotic Mango- </span> <br> not so sour but very tasty </figcaption>
+									
+								</figure>
+							
+							</div>
+							
+							<div class="row">
+							
+								<figure>
+								
+									<img src="images/lemonlime.png" alt="Our lemon lime flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Citric Lemon-Lime- </span> <br> are you brave enough? </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/cottoncandy.png" alt="Our cotton candy flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Carnival Cotton Candy- </span> <br> so nostalgic </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/bubblegum.png" alt="Our bubblegum flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Sugary Bubblegum- </span> <br> for the little ones and the old ones </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/cocacola.png" alt="Our coca cola flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Tasty Cola- </span> <br> fancy a coke? </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/coconut.png" alt="Our coconut flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Pure Coconut- </span> <br> the flavor makes up for the color! </figcaption>
+									
+								</figure>
+						
+							</div>
+							
+						</div>
+						
+					</section>
+					
+					<section id="signature">
+						
+						<div class="menutitle">
+							
+							<h1> Signature Cones </h1>
+							
+							<hr>
+							
+						</div>
+						
+						<div class="menudescription">
+						
+							<p> Feeling a little Fancy? <br> Comes in Large $7<sup>.99</sup> </p>
+						
+						</div>
+						
+						<div>
+						
+							<div class="row">
+							
+								<figure>
+								
+									<img src="images/freezedom.png" alt="Our freezedom signature flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> New! Freezedom- </span> <br> the perfect mix of blue raspberry and strawberry flavor because you are worth it </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/northernlights.png" alt="Our northern lights signature flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Northern Lights- </span> <br> our northern lights signature cone combines pineapple and blue raspberry to give all sour enthusiasts the best experience </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/iceberg.png" alt="Our iceberg signature flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Iceberg- </span> <br> enjoy the bubble gum and coconut mix! </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/yetisfav.png" alt="Our yeti's fav signature flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Yeti's Fav- </span> <br> something truly unique: vanilla and blueberry syrup, our best seller </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/miniyeti.png" alt="Our miniyeti signature flavor" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Mini Yeti- </span> <br> vanilla syrup and small yeti's for the little cone eaters </figcaption>
+									
+								</figure>
+							
+							</div>
+							
+						</div>
+						
+					</section>
+					
+					<section id="icecream">
+						
+						<div class="menutitle">
+							
+							<h1> Ice Cream & Popsicles </h1>
+						
+							<hr>
+							
+						</div>
+						
+						<div class="menudescription">
+						
+							<p> Perfect if you're on the Softer Side! <br> Per scoop of ice cream $1<sup>.99</sup> <br> Popsicle $2<sup>.49</sup> </p>
+						
+						</div>
+						
+						<div>
+						
+							<div class="row">
+							
+								<figure>
+								
+									<img src="images/blueberryice.png" alt="Our blueberry ice cream" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Blueberry </span> <br> soft blueberry ice cream </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/strawberryice.png" alt="Our strawberry ice cream" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Strawberry </span> <br> sweet strawberry ice cream </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/vanillaice.png" alt="Our vanilla ice cream" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Vanilla </span> <br> blue vanilla ice cream, a fan fav </figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/redpop.png" alt="Our cherry popsicle for two" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Cherry Popsicle </span> <br> popsicle for two, cherry flavored</figcaption>
+									
+								</figure>
+								
+								<figure>
+								
+									<img src="images/bluepop.png" alt="Our blue raspberry popsicles for two" height="100%" width="100%">
+									
+									<figcaption> <span style="font-size: 12pt;"> Blue Raspberry Popsicle </span> <br> blue raspberry popsicle for  two</figcaption>
+									
+								</figure>
+							
+							</div>
+							
+						</div>
+						
+					</section>
+					
+					<section id="giftcard">
+						
+						<div class="menutitle">
+							
+							<h1> Giftcards </h1>
+							
+							<hr>
+							
+						</div>
+						
+						<div class="menudescription">
+						
+							<p> Want to Make Someone Happy? <br> Range from $10 - $100 </p>
+						
+						</div>
+						
+						<div class="row">
+						
+							<figure>
+							
+								<img src="images/giftcard.png" alt="Our giftcard" height="100%" width="100%">
+								
+								<figcaption> A gift card in case you still need a present </figcaption>
+								
+							</figure>
+							
+							
+							<figure>
+							
+								<img src="images/newgiftcard.png" alt="New giftcard coming soon" height="100%" width="100%">
+								
+								<figcaption> Coming soon! </figcaption>
+								
+							</figure>
+						
+						</div>
+						
+					</section>
+					
+				</div>
+			
+			</main>
+			
+			<footer>
+			
+				<div id="left">
+			
+					<div id="iconcontainer">
+						
+						<a href="https://www.facebook.com" target="_blank">
+							<img src="images/newfacebook.png" width="70%">
+						</a>
+					
+						<a href="https://www.x.com" target="_blank">
+							<img src="images/newx.png" width="70%">
+						</a>
+						
+						<a href="https://www.youtube.com" target="_blank">
+							<img src="images/newyoutube.png" width="70%">
+						</a>
+						
+						<a href="https://www.instagram.com" target="_blank">
+							<img src="images/newinstagram.png" width="70%">
+						</a>
+						
+						<a href="https://www.tiktok.com" target="_blank">
+							<img src="images/newtiktok.png" width="70%">
+						</a>
+						
+						<a href="https://www.snapchat.com" target="_blank">
+							<img src="images/newsnapchat.png" width="70%">
+						</a>
+							
+					</div>
+					
+					<hr>
+					
+					<div id="pagecontainer">
+					
+						<a class="page" href="menu.html"> What do we have? </a>
+						<a class="page" href="calendar.html"> Location </a>
+						<a class="page" href="contact.html"> Contact Us Now! </a>
+					
+					</div>
+					
+				</div>
+				
+				<div id="right">
+					
+					<div class="legal">
+					
+						<table>
+						
+							<tr> <td> <a href="#"> Terms of Use </a> </td> </tr>
+							<tr> <td> <a href="#"> Privacy Policy </a> </td> </tr>
+							<tr> <td> <a href="#"> Cookie Settings </a> </td> </tr>
+							
+						</table>
+						
+					</div>
+					
+					<div class="legal">
+					
+						<table>
+						
+							<tr> <td> <a href="#"> Accessibility </a> </td> </tr>
+							<tr> <td> <a href="#"> Do Not Sell or Share My Personal Information </a> </td> </tr>
+							<tr> <td> <a href="#"> Consumer Health Data </a> </td> </tr>
+							
+						</table>
+					
+					</div>
+					
+					<div class="legal">
+					
+						<table>
+						
+							<tr> <td> <a href="#"> CA Supply Chain Act </a> </td> </tr>
+							<tr> <td> <a href="#"> Your Ad Choices </a> </td> </tr>
+							<tr> <td> <p> ©2025 Yeti's Pick Snowcones. All rights reserved. </p> </td> </tr>
+							
+						</table>
+					
+					</div>
+					
+				</div>
+			
+			</footer>
+		
+		</body>
+		
+	</html>
